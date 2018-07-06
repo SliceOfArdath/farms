@@ -3,7 +3,7 @@ name:'Farms',
 author:'OscarHavril',
 desc:'A simple mod that add farming. Needed for Futuristic Enginering',
 engineVersion:1,
-manifest:'https://rawgit.com/OscarHavril/farms/master/farms.js',
+manifest:'https://rawgit.com/OscarHavril/farms/master/farmsManifest.js',
 requires:['Default dataset*'],
 sheets:{'cookieSheet':'https://raw.githubusercontent.com/Generatoror/hello-world/master/sprits.png'},//custom stylesheet (note : broken in IE and Edge for the time being) Note2 : to Edit
 func:function()
