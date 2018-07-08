@@ -9,7 +9,7 @@ sheets:{'farmsSheet':'https://raw.githubusercontent.com/OscarHavril/farms/master
 func:function()
 {
 
- 	 G.resCategories={
+ 	new G.resCategories={
     		'Fanimals':{
 			name:'Animals',
 			base:[],
@@ -18,36 +18,36 @@ func:function()
   }
   	new G.Res({
 		name:'Fseed',
-		desc:'[seed] is not very tasty or healthy. Truely not',
+		desc:'[Fseed] is not very tasty or healthy. Truely not',
 		icon:[0,0,'farmsSheet'],
 		turnToByContext:{'eat':{'health':0.02,'happiness':0.005},'decay':{'spoiled food':0.1},
 		category:'food',
 	});
 	new G.Res({
 		name:'Fwheat',
-		desc:'[wheat] is not very tasty or healthy. Hmm..I\'ve already seen this somwhere..',
+		desc:'[Fwheat] is not very tasty or healthy. Hmm..I\'ve already seen this somwhere..',
 		icon:[0,2,'farmsSheet'],
 		turnToByContext:{'eat':{'health':0.02,'happiness':0.01},'decay':{'spoiled food':0.5}},
 		category:'food',
 	});
   	new G.Res({
 		name:'Fegg',
-		desc:'Well, it\'s eggs.', //Yeah, edit me that, maybe.
+		desc:'Well, it\'s [Fegg]s.', //Yeah, edit me that, maybe.
 		icon:[0,3,'farmsSheet'],
-		turnToByContext:{'eat':{'health':0.005,'happiness':1},'decay':{'egg':0.7,'spoiled food':0.3}},
+		turnToByContext:{'eat':{'health':0.005,'happiness':1},'decay':{'Fegg':0.7,'spoiled food':0.3}},
 		category:'food',
 	});
 	new G.Res({
 		name:'Fchicken',
-		desc:'Cached by [hunter]s, they will produce eggs if there are farms', 
+		desc:'Cached by [hunter]s, they will produce [Fegg]s if there are [Ffarm]s', 
 		icon:[0,1,'farmsSheet'],
-		turnToByContext:{'decay':{'chichen':0.95,'meat':0.05}},//yes, a chicken can die...
+		turnToByContext:{'decay':{'Fchichen':0.95,'meat':0.05}},//yes, a chicken can die...
 		category:'Fanimals',
 	});
-  	G.unitCategories.push(
+  	new G.unitCategories.push(
 		{id:'farming',name:'Farming'},
 	);
- 	 new G.Unit({
+ 	new G.Unit({
 		name:'Ffarm',
 		desc:'@[Ffarm]s lets you produce specials goods like wheed.<>Yep... Oh wait I had written wheed, sorry, it\'s [Fwheat], of course, yes.',
 		icon:[1,0,'farmsSheet'],
@@ -56,14 +56,14 @@ func:function()
 		staff:{'knapped tools':1},
     		modes:{
 			'plant care':{name:'Farming',icon:[0,0,'farmsSheet'],desc:'Produce wheat',use:{'stone tools':1}},
-			'animal care':{name:'Breeding',icon:[0,1,'farmsSheet'],desc:'Breed animals',use:{'stone tools':1,'chicken':3}},
+			'animal care':{name:'Breeding',icon:[0,1,'farmsSheet'],desc:'Breed animals',use:{'stone tools':1,'Fchicken':3}},
 		},
 		effects:[
       
      			{type:'mult',value:1.2,req:{'harvest rituals':'on'},mode:'plant care'},
       			{type:'mult',value:1.4,req:{'farming':true},mode:'plant care'}
-      			{type:'convert',from:{'water':0.2,'seed':1},into:{'wheat':2},every:1,mode:'plant care'},
-     			{type:'convert',from:{'seed':10,},into:{'egg':1},every:5,mode:'animal care'},
+      			{type:'convert',from:{'water':0.2,'Fseed':1},into:{'Fwheat':2},every:1,mode:'plant care'},
+     			{type:'convert',from:{'Fseed':10,},into:{'Fegg':1},every:5,mode:'animal care'},
       
 		],
 		req:{'Ffarms':true},
@@ -71,11 +71,11 @@ func:function()
 	});
 	//Then we augment the base data to incorporate our new resources :
 		//adding seeds as something that can be gathered from grass yep, really cool
-	G.getDict('grass').res['gather']['seed']=6;
+	G.getDict('grass').res['gather']['Fseed']=6;
 		//adding a new mode to hunter for them being more friendly (I already said it)
 	G.getDict('hunter').modes['cach']={name:'Cach Animals',desc:'The hunter don\'t kill, they try to be friendly.',req:{'caching':true}};
 		//adding a new effect to artisans that handles the actual hot sauce preparing and is only active when the unit has the mode "hot sauce"
-	G.getDict('hunter').effects.push({type:'gather',context:'gather',what:{'chicken':0.1},amount:0.1,max:0.1,mode:'caching'});
+	G.getDict('hunter').effects.push({type:'gather',context:'gather',what:{'Fchicken':0.1},amount:0.1,max:0.1,mode:'caching'});
 	
 	
 	new G.Tech({
