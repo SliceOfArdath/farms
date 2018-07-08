@@ -20,21 +20,21 @@ func:function()
 		name:'Fseed',
 		desc:'[Fseed] is not very tasty or healthy. Truely not',
 		icon:[0,0,'farmsSheet'],
-		turnToByContext:{'eat':{'health':0.02,'happiness':0.005},'decay':{'spoiled food':0.1},
+		turnToByContext:{'eating':{'health':0.02,'happiness':0.005},'decay':{'spoiled food':0.1},
 		category:'food',
 	});
 	new G.Res({
 		name:'Fwheat',
 		desc:'[Fwheat] is not very tasty or healthy. Hmm..I\'ve already seen this somwhere..',
 		icon:[0,2,'farmsSheet'],
-		turnToByContext:{'eat':{'health':0.02,'happiness':0.01},'decay':{'spoiled food':0.5}},
+		turnToByContext:{'eating':{'health':0.02,'happiness':0.01},'decay':{'spoiled food':0.5}},
 		category:'food',
 	});
   	new G.Res({
 		name:'Fegg',
 		desc:'Well, it\'s [Fegg]s.', //Yeah, edit me that, maybe.
 		icon:[0,3,'farmsSheet'],
-		turnToByContext:{'eat':{'health':0.005,'happiness':1},'decay':{'Fegg':0.7,'spoiled food':0.3}},
+		turnToByContext:{'eating':{'health':0.005,'happiness':1},'decay':{'Fegg':0.7,'spoiled food':0.3}},
 		category:'food',
 	});
 	new G.Res({
