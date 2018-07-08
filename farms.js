@@ -10,50 +10,46 @@ func:function()
 {
 
  	 G.resCategories={
-    		'animals':{
+    		'Fanimals':{
 			name:'Animals',
 			base:[],
 			side:[],
 		},
   }
   	new G.Res({
-		name:'seed',
+		name:'Fseed',
 		desc:'[seed] is not very tasty or healthy. Truely not',
 		icon:[0,0,'farmsSheet'],
 		turnToByContext:{'eat':{'health':0.02,'happiness':0.005},'decay':{'spoiled food':0.1},
-		partOf:'food',
 		category:'food',
 	});
 	new G.Res({
-		name:'wheat',
+		name:'Fwheat',
 		desc:'[wheat] is not very tasty or healthy. Hmm..I\'ve already seen this somwhere..',
 		icon:[0,2,'farmsSheet'],
-		turnToByContext:{'eat':{'health':0.02,'happiness':0.01},'decay':{'spoiled food':0.5}},//this basically translates to : "when eaten, generate some health and happiness; when rotting, turn into either nothing or some spoiled food"
-		partOf:'food',
+		turnToByContext:{'eat':{'health':0.02,'happiness':0.01},'decay':{'spoiled food':0.5}},
 		category:'food',
 	});
   	new G.Res({
-		name:'egg',
+		name:'Fegg',
 		desc:'Well, it\'s eggs.', //Yeah, edit me that, maybe.
 		icon:[0,3,'farmsSheet'],
 		turnToByContext:{'eat':{'health':0.005,'happiness':1},'decay':{'egg':0.7,'spoiled food':0.3}},
-		partOf:'food',
 		category:'food',
 	});
 	new G.Res({
-		name:'chicken',
+		name:'Fchicken',
 		desc:'Cached by [hunter]s, they will produce eggs if there are farms', 
 		icon:[0,1,'farmsSheet'],
 		turnToByContext:{'decay':{'chichen':0.95,'meat':0.05}},//yes, a chicken can die...
-		partOf:'animals',
-		category:'animals',
+		category:'Fanimals',
 	});
   	G.unitCategories.push(
 		{id:'farming',name:'Farming'},
 	);
  	 new G.Unit({
-		name:'farm',
-		desc:'@[farm]s lets you produce specials goods like wheed.<>Yep... Oh wait I had written wheed, sorry, it\'s [wheat], of course, yes.',
+		name:'Ffarm',
+		desc:'@[Ffarm]s lets you produce specials goods like wheed.<>Yep... Oh wait I had written wheed, sorry, it\'s [Fwheat], of course, yes.',
 		icon:[1,0,'farmsSheet'],
 		cost:{'basic building materials':300},
 		use:{'worker':1},
@@ -70,7 +66,7 @@ func:function()
      			{type:'convert',from:{'seed':10,},into:{'egg':1},every:5,mode:'animal care'},
       
 		],
-		req:{'farms':true},
+		req:{'Ffarms':true},
 		category:'farming',
 	});
 	//Then we augment the base data to incorporate our new resources :
@@ -83,14 +79,14 @@ func:function()
 	
 	
 	new G.Tech({
-		name:'caching',
+		name:'Fcaching',
 		desc:'@[hunter]s can now cach Animals and put them into farms//You\'ll of course need these farms from preventing your animals dying from corpses or running out.',
 		icon:[0,1,'farmsSheet'],
 		cost:{'insight':10},
-		req:{'farms':true},
+		req:{'Ffarms':true},
 	});
         new G.Tech({
-		name:'farms',
+		name:'Ffarms',
 		desc:'@You can now build farms who let you produce plants//(And store Animals, yep.)',
 		icon:[1,0,'farmsSheet'],
 		cost:{'insight':20},
@@ -99,10 +95,10 @@ func:function()
 	
 	new G.Trait({
 		name:'Farmers',
-		desc:'@[farm]s are now truely more efficient',
+		desc:'@[Ffarm]s are now truely more efficient',
 		icon:[1,1,'farmsSheet'],
 		chance:5,
-		req:{'farms':true},
+		req:{'Ffarms':true},
 	});
 			
 }
