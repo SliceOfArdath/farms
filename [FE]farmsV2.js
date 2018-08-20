@@ -148,8 +148,8 @@ func:function()
 	G.getDict('artisan').modes['MakeJuiceBerry']={name:'Make Juice from Berries',desc:'Use Berries to make juice.',req:{'Juice Making':true, 'Berry Picking':true},use:{'stone tools':1}};
 	G.getDict('artisan').modes['GrindGrain']={name:'Grind Grain into Flour',desc:'Use Wheat to make Wheat Flour',req:{'Grinding':true},use:{'stone tools':1}};
 	//G.getDict('artisan').effects.push({type:'convert',from:{'hot pepper':3,'bees':3},into:{'hot sauce':1},every:3,mode:'hot sauce'});
-	G.getDict('artisan').effects.push({type:'convert',from:{'fruit':3},into:{'Fruit Juice':2},every:5,mode:'MakeJuiceFruit'});
-	G.getDict('artisan').effects.push({type:'convert',from:{'Berries':3},into:{'Berry Juice':4},every:5,mode:'MakeJuiceBerry'});
+	G.getDict('artisan').effects.push({type:'convert',from:{'fruit':3},into:{'seed':2},every:5,mode:'MakeJuiceFruit'});
+	G.getDict('artisan').effects.push({type:'convert',from:{'Berries':3},into:{'seed':4},every:5,mode:'MakeJuiceBerry'});
 		
 	G.getDict('artisan').effects.push({type:'convert',from:{'Wheat':1},into:{'Wheat Flour':2},every:5,mode:'GrindGrain'});
 	G.getDict('artisan').effects.push({type:'convert',from:{'Barley':1},into:{'Barley Flour':2},every:5,mode:'GrindGrain'});
