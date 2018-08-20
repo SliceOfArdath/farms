@@ -14,15 +14,6 @@ sheets:{'imageSheet':'https://raw.githubusercontent.com/OscarHavril/farms/master
 func:function()
 	{	
 	
-	
- 	new G.resCategories={
-    		'animals':{
-			name:'Animals',
-			base:[],
-			side:[],
-			},
-		}	
-		
 	//First we add the new resources 
 		new G.Res({
 		name:'Fruit Juice',
