@@ -6,7 +6,7 @@
 G.AddData({
 name:'FarmsV2',
 author:'OscarHavril',
-desc:'A simple mod that add farming. Needed for Futuristic Enginering (Test 4)',
+desc:'A simple mod that add farming. Needed for Futuristic Enginering (Test 5)',
 engineVersion:1,
 manifest:'ModManifest.js',
 requires:['Default dataset*'],
