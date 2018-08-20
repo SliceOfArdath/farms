@@ -13,14 +13,6 @@ requires:['Default dataset*'],
 sheets:{'farmsSheet':'https://raw.githubusercontent.com/OscarHavril/farms/master/pixil-frame-0(3).png'},//custom stylesheet (note : broken in IE and Edge for the time being)
 func:function()
 	{	
-
- 	G.resCategories={
-    		'animals':{
-			name:'Animals',
-			base:[],
-			side:[],
-			},
-		}
 	
 	//First we add the new resources 
 	new G.Res({
