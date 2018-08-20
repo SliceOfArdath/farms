@@ -14,8 +14,8 @@ sheets:{'farmsSheet':'https://raw.githubusercontent.com/OscarHavril/farms/master
 func:function()
 	{	
 
- 	new G.resCategories={
-    		'Fanimals':{
+ 	G.resCategories={
+    		'animals':{
 			name:'Animals',
 			base:[],
 			side:[],
