@@ -4,7 +4,7 @@
 //TODO: Add Religous buildings to increase faith and culture. Add priests along with the buildings. 
 
 G.AddData({
-name:'Legacy COOL! Mod',
+name:'FarmsV2',
 author:'Packerfan-Gamer',
 desc:'A mod that adds cool things to the game. Currently have berries, juice, and Mass Graves (oh yes!!), and so much moar!',
 engineVersion:1,
