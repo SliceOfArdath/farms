@@ -6,7 +6,7 @@
 G.AddData({
 name:'FarmsV2',
 author:'OscarHavril',
-desc:'A simple mod that add farming. Needed for Futuristic Enginerin',
+desc:'A simple mod that add farming. Needed for Futuristic Enginering (Test 3)',
 engineVersion:1,
 manifest:'ModManifest.js',
 requires:['Default dataset*'],
@@ -24,19 +24,11 @@ func:function()
 		}	
 		
 	//First we add the new resources 
-	new G.Res({
-		name:'Fruit Juice',
-		desc:'[Fruit Juice] tastes better than [water].',
-		icon:[0,1,'imageSheet'],
-		turnToByContext:{'eat':{'health':0.06,'happiness':0.1},'decay':{'spoiled food':0.2}},//this basically translates to : "when eaten, generate some health and happiness; when rotting, turn into either nothing or some spoiled food"
-		partOf:'food',
-		category:'food',
-	});
 		new G.Res({
-		name:'Berry Juice',
-		desc:'[Berry Juice] tastes better than [water].',
-		icon:[0,1,'imageSheet'],
-		turnToByContext:{'eat':{'health':0.07,'happiness':0.1},'decay':{'spoiled food':0.2}},//this basically translates to : "when eaten, generate some health and happiness; when rotting, turn into either nothing or some spoiled food"
+		name:'seed',
+		desc:'[seed] is not very tasty or healthy. Truely not',
+		icon:[0,0,'imageSheet'],
+		turnToByContext:{'eat':{'health':0.02,'happiness':0.005},'decay':{'spoiled food':0.1}},//this , ges; when rotting, turn ng or some spoiled food"
 		partOf:'food',
 		category:'food',
 	});
