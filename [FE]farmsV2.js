@@ -6,14 +6,22 @@
 G.AddData({
 name:'FarmsV2',
 author:'OscarHavril',
-desc:'A simple mod that add farming. Needed for Futuristic Enginering (Test 3)',
+desc:'A simple mod that add farming. Needed for Futuristic Enginering (Test 4)',
 engineVersion:1,
 manifest:'ModManifest.js',
 requires:['Default dataset*'],
 sheets:{'imageSheet':'https://raw.githubusercontent.com/OscarHavril/farms/master/pixil-frame-0(3).png'},//custom stylesheet (note : broken in IE and Edge for the time being)
 func:function()
 	{	
-	
+		
+ 	new G.resCategories={
+    		'animals':{
+			name:'Animals',
+			base:[],
+			side:[],
+			},
+		}	
+		
 	//First we add the new resources 
 		new G.Res({
 		name:'Fruit Juice',
