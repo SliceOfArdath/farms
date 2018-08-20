@@ -16,7 +16,7 @@ func:function()
 	
 	
  	new G.resCategories={
-    		'Fanimals':{
+    		'animals':{
 			name:'Animals',
 			base:[],
 			side:[],
@@ -27,7 +27,7 @@ func:function()
 		new G.Res({
 		name:'seed',
 		desc:'[seed] is not very tasty or healthy. Truely not',
-		icon:[0,0,'imageSheet'],
+		icon:[0,1,'imageSheet'],
 		turnToByContext:{'eat':{'health':0.02,'happiness':0.005},'decay':{'spoiled food':0.1}},//this , ges; when rotting, turn ng or some spoiled food"
 		partOf:'food',
 		category:'food',
