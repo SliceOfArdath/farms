@@ -5,12 +5,12 @@
 
 G.AddData({
 name:'FarmsV2',
-author:'Packerfan-Gamer',
-desc:'A mod that adds cool things to the game. Currently have berries, juice, and Mass Graves (oh yes!!), and so much moar!',
+author:'OscarHavril',
+desc:'A simple mod that add farming. Needed for Futuristic Enginerin',
 engineVersion:1,
 manifest:'ModManifest.js',
 requires:['Default dataset*'],
-sheets:{'imageSheet':'http://i.imgur.com/owlnODu.png'},//custom stylesheet (note : broken in IE and Edge for the time being)
+sheets:{'farmsSheet':'https://raw.githubusercontent.com/OscarHavril/farms/master/pixil-frame-0(3).png'},//custom stylesheet (note : broken in IE and Edge for the time being)
 func:function()
 	{	
 
